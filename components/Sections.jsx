@@ -106,7 +106,7 @@ export function Services() {
           <div>
             {services.map((s, i) => (
               <motion.article className="service" key={s.title} onViewportEnter={() => setActive(i)} viewport={{ margin: '-45% 0% -45% 0%' }}>
-                <div className="service-mobile-img"><img src={s.img} alt={s.title} loading="lazy" /></div>
+                <div className="service-mobile-img"><RevealImage src={s.img} alt={s.title} strength={6} /></div>
                 <FadeUp><div className="num">0{i + 1}</div></FadeUp>
                 <Lines as="h3" lines={[s.title]} />
                 <FadeUp as="p" delay={0.1}>{s.text}</FadeUp>
@@ -258,7 +258,13 @@ export function Catalogues() {
               <FadeUp as="p" className="lead">{partner.activities}. Choisissez vos matériaux, nos équipes les posent.</FadeUp>
             </div>
             {catalogues.map((c, i) => (
-              <a className={`cat-card ${c.pdf ? 'is-cover' : ''}`} key={c.title} href={c.href} target="_blank" rel="noopener">
+              <motion.a
+                className={`cat-card ${c.pdf ? 'is-cover' : ''}`} key={c.title} href={c.href} target="_blank" rel="noopener"
+                initial={{ opacity: 0, y: 60, rotate: 2 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                viewport={{ once: true, amount: 0.02 }}
+                transition={{ duration: 0.9, ease, delay: (i % 3) * 0.08 }}
+              >
                 <div className="cat-media">
                   <img src={c.img} alt={c.pdf ? `Couverture du catalogue ${c.title} 2026 – ${partner.name}` : `${c.title} – ${partner.name}`} loading="lazy" />
                   {!c.pdf && <span className="cat-n">0{i + 1}</span>}
@@ -272,7 +278,7 @@ export function Catalogues() {
                   <small>{c.pdf ? `PDF · ${c.pages} pages` : partner.name}</small>
                   <i>↗</i>
                 </span>
-              </a>
+              </motion.a>
             ))}
           </motion.div>
           <div className="cat-progress"><motion.span style={{ scaleX: scrollYProgress }} /></div>
@@ -321,7 +327,7 @@ export function Process() {
           <FadeUp as="p" className="lead">Un accompagnement clair du premier rendez-vous à la remise des clés.</FadeUp>
         </div>
         <div className="steps" ref={ref}>
-          <div className="steps-line"><motion.span style={{ scaleX: scrollYProgress }} /></div>
+          <div className="steps-line"><motion.span className="h" style={{ scaleX: scrollYProgress }} /><motion.span className="v" style={{ scaleY: scrollYProgress }} /></div>
           {steps.map((s, i) => (
             <FadeUp className="step" key={s.title} delay={i * 0.12}>
               <span className="n">0{i + 1}</span>
