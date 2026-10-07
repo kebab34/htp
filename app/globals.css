@@ -207,18 +207,30 @@ h3 { font-size: 1.35rem; letter-spacing: -.02em; line-height: 1.2; }
 /* ============ CATALOGUES (défilement horizontal) ============ */
 .h-scroll { position: relative; height: var(--h); }
 .h-scroll-sticky { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
-.h-scroll-track { display: flex; gap: clamp(1rem, 2vw, 1.6rem); padding: 0 var(--gutter); will-change: transform; }
-.cat-card { position: relative; flex: 0 0 clamp(280px, 30vw, 440px); aspect-ratio: 3 / 4; border-radius: var(--radius); overflow: hidden; color: #fff; display: block; }
-.cat-card img { position: absolute; inset: -6% 0; width: 100%; height: 112%; object-fit: cover; transition: transform 1.2s var(--ease); }
-.cat-card:hover img { transform: scale(1.08); }
-.cat-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .78)); }
-.cat-card .cat-body { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1.6rem; }
+.h-scroll-track { display: flex; align-items: flex-start; gap: clamp(1rem, 2vw, 1.6rem); padding: 0 var(--gutter); will-change: transform; }
+.cat-card { flex: 0 0 clamp(260px, 26vw, 400px); display: flex; flex-direction: column; gap: .8rem; color: #fff; }
+.cat-media { position: relative; aspect-ratio: 1 / 1.414; border-radius: var(--radius); overflow: hidden; }
+.cat-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.cat-card:hover .cat-media img { transform: scale(1.05); }
+.cat-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .75)); }
+.cat-card .cat-body { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1.5rem; }
 .cat-card .cat-n { position: absolute; top: 1.3rem; left: 1.5rem; z-index: 2; font-size: .78rem; letter-spacing: .2em; }
-.cat-card h3 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); letter-spacing: -.04em; }
-.cat-card p { color: rgba(255, 255, 255, .78); font-size: .95rem; margin: .3rem 0 1.1rem; }
-.cat-link { display: inline-flex; align-items: center; gap: .7rem; font-size: .9rem; font-weight: 600; padding: .65rem 1.1rem; border-radius: 999px; background: rgba(255, 255, 255, .14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background .4s, color .4s; }
-.cat-card:hover .cat-link { background: var(--accent); color: var(--on-accent); }
-.cat-intro { flex: 0 0 clamp(280px, 32vw, 460px); display: flex; flex-direction: column; justify-content: center; padding-right: 2rem; }
+.cat-card h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); letter-spacing: -.04em; }
+.cat-card p { color: rgba(255, 255, 255, .78); font-size: .92rem; margin-top: .3rem; }
+.cat-card.is-cover .cat-media::after { display: none; }
+.cat-card.is-cover .cat-body { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); }
+.cat-link {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 1rem;
+  padding: .85rem 1.1rem; border-radius: var(--radius); background: var(--dark-2, rgba(255, 255, 255, .06));
+  box-shadow: inset 0 0 0 1px var(--line); color: var(--on-dark); transition: background .4s, color .4s, box-shadow .4s;
+}
+.cat-link span { font-weight: 600; font-size: .95rem; }
+.cat-link small { grid-row: 2; color: var(--muted); font-size: .78rem; transition: color .4s; }
+.cat-link i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--on-accent); transition: transform .5s var(--ease); }
+.cat-card:hover .cat-link { background: var(--accent); color: var(--on-accent); box-shadow: none; }
+.cat-card:hover .cat-link small { color: var(--on-accent); opacity: .75; }
+.cat-card:hover .cat-link i { background: var(--on-accent); color: var(--accent); transform: rotate(45deg); }
+.cat-intro { flex: 0 0 clamp(280px, 32vw, 460px); align-self: center; display: flex; flex-direction: column; justify-content: center; padding-right: 2rem; }
 .cat-intro h2 { margin-bottom: 1.5rem; }
 .cat-progress { margin: 2.5rem var(--gutter) 0; height: 1px; background: var(--line); position: relative; }
 .cat-progress span { position: absolute; inset: 0; background: var(--accent); transform-origin: left; }

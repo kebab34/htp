@@ -258,14 +258,20 @@ export function Catalogues() {
               <FadeUp as="p" className="lead">{partner.activities}. Choisissez vos matériaux, nos équipes les posent.</FadeUp>
             </div>
             {catalogues.map((c, i) => (
-              <a className="cat-card" key={c.title} href={c.href} target={c.href === '#' ? undefined : '_blank'} rel="noopener">
-                <img src={c.img} alt={`Catalogue ${c.title} – ${partner.name}`} loading="lazy" />
-                <span className="cat-n">0{i + 1}</span>
-                <div className="cat-body">
-                  <h3>{c.title}</h3>
-                  <p>{c.text}</p>
-                  <span className="cat-link">Voir le catalogue ↗</span>
+              <a className={`cat-card ${c.pdf ? 'is-cover' : ''}`} key={c.title} href={c.href} target="_blank" rel="noopener">
+                <div className="cat-media">
+                  <img src={c.img} alt={c.pdf ? `Couverture du catalogue ${c.title} 2026 – ${partner.name}` : `${c.title} – ${partner.name}`} loading="lazy" />
+                  {!c.pdf && <span className="cat-n">0{i + 1}</span>}
+                  <div className="cat-body">
+                    <h3>{c.title}</h3>
+                    <p>{c.text}</p>
+                  </div>
                 </div>
+                <span className="cat-link">
+                  <span>{c.pdf ? 'Ouvrir le catalogue' : 'Voir sur dekordesign.fr'}</span>
+                  <small>{c.pdf ? `PDF · ${c.pages} pages` : partner.name}</small>
+                  <i>↗</i>
+                </span>
               </a>
             ))}
           </motion.div>
