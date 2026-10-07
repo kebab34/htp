@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTP – Constructeur de villas & maçonnerie à Montpellier | Hérault & Gard</title>
+  <meta name="description" content="HTP, entreprise de maçonnerie et constructeur de villas à Montpellier. Gros œuvre, maisons individuelles, logements collectifs, pose de carrelage. Intervention dans l'Hérault (34) et le Gard (30). Devis gratuit.">
+  <meta name="keywords" content="constructeur villa Montpellier, maçon Montpellier, entreprise maçonnerie Hérault, construction maison Gard, gros œuvre Nîmes, pose carrelage Montpellier">
+  <link rel="canonical" href="https://www.htp-construction.fr/"><!-- À COMPLÉTER : vrai nom de domaine -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HTP – Constructeur de villas & maçonnerie à Montpellier">
+  <meta property="og:description" content="Maçonnerie, villas, logements et carrelage dans l'Hérault et le Gard.">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c2603a'/%3E%3Cpath d='M14 34 32 18l18 16v14H14z' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Données structurées pour Google (fiche entreprise locale) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "HTP",
+    "description": "Entreprise de maçonnerie et constructeur de villas et logements à Montpellier, intervenant dans l'Hérault et le Gard.",
+    "url": "https://www.htp-construction.fr/",
+    "telephone": "+33400000000",
+    "email": "contact@htp-construction.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montpellier",
+      "postalCode": "34000",
+      "addressRegion": "Occitanie",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      {"@type": "AdministrativeArea", "name": "Hérault"},
+      {"@type": "AdministrativeArea", "name": "Gard"}
+    ],
+    "knowsAbout": ["Maçonnerie", "Gros œuvre", "Construction de villas", "Logements collectifs", "Pose de carrelage"]
+  }
+  </script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#accueil" class="logo" aria-label="HTP – accueil">
+    <span class="logo-mark">HTP</span>
+    <span class="logo-sub">Maçonnerie<br>& Construction</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#savoir-faire">Savoir-faire</a>
+    <a href="#catalogues">Catalogues</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#zone">Zone</a>
+    <a href="#contact" class="btn btn-small">Devis gratuit</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="accueil">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow reveal-load">Montpellier · Hérault · Gard</p>
+      <h1 class="hero-title">
+        <span class="w">Nous</span> <span class="w">construisons</span>
+        <span class="w accent">votre</span> <span class="w accent">villa,</span>
+        <span class="w">de</span> <span class="w">la</span> <span class="w">fondation</span>
+        <span class="w">aux</span> <span class="w">finitions.</span>
+      </h1>
+      <p class="hero-lead reveal-load">HTP, entreprise de maçonnerie et constructeur de villas et de logements. Gros œuvre, carrelage, menuiseries, cuisines, sanitaires : un seul interlocuteur pour tout votre projet.</p>
+      <div class="hero-cta reveal-load">
+        <a href="#contact" class="btn">Demander un devis gratuit</a>
+        <a href="#realisations" class="btn btn-ghost">Voir nos réalisations</a>
+      </div>
+    </div>
+
+    <!-- Maison qui se construit -->
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 360" class="house">
+        <g class="blueprint">
+          <line x1="20" y1="320" x2="400" y2="320" class="bp-line" />
+          <path d="M70 320 V170 L210 70 L350 170 V320" class="bp-line" />
+          <line x1="40" y1="340" x2="380" y2="340" class="bp-dim" />
+          <line x1="40" y1="334" x2="40" y2="346" class="bp-dim" />
+          <line x1="380" y1="334" x2="380" y2="346" class="bp-dim" />
+          <text x="210" y="356" class="bp-text">12,00 m</text>
+        </g>
+        <g class="bricks" id="bricks"></g>
+        <path d="M54 178 L210 64 L366 178" class="roof" />
+        <rect x="180" y="240" width="60" height="80" class="door" />
+        <rect x="100" y="200" width="50" height="44" class="window lit w1" />
+        <rect x="270" y="200" width="50" height="44" class="window lit w2" />
+        <circle cx="210" cy="140" r="16" class="window lit w3" />
+      </svg>
+    </div>
+  </div>
+  <a href="#chiffres" class="scroll-hint" aria-label="Défiler"><span></span></a>
+</section>
+
+<!-- ============ BANDEAU DÉFILANT ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Maçonnerie</span><span>Villas</span><span>Logements collectifs</span><span>Gros œuvre</span><span>Carrelage</span><span>Menuiseries extérieures</span><span>Cuisines</span><span>Sanitaire</span><span>Portes</span>
+    <span>Maçonnerie</span><span>Villas</span><span>Logements collectifs</span><span>Gros œuvre</span><span>Carrelage</span><span>Menuiseries extérieures</span><span>Cuisines</span><span>Sanitaire</span><span>Portes</span>
+  </div>
+</div>
+
+<!-- ============ CHIFFRES ============ -->
+<!-- À COMPLÉTER : remplacer par vos vrais chiffres -->
+<section class="stats" id="chiffres">
+  <div class="stat reveal"><span class="num" data-count="15">0</span><span class="plus">+</span><p>années d'expérience</p></div>
+  <div class="stat reveal"><span class="num" data-count="120">0</span><span class="plus">+</span><p>villas construites</p></div>
+  <div class="stat reveal"><span class="num" data-count="30">0</span><span class="plus">+</span><p>bâtiments de logements</p></div>
+  <div class="stat reveal"><span class="num" data-count="2">0</span><p>départements : Hérault & Gard</p></div>
+</section>
+
+<!-- ============ SAVOIR-FAIRE ============ -->
+<section class="section" id="savoir-faire">
+  <div class="section-head reveal">
+    <p class="eyebrow">Notre savoir-faire</p>
+    <h2>Maçon et constructeur à Montpellier</h2>
+    <p class="section-lead">Du terrassement à la remise des clés, nos équipes réalisent le gros œuvre de vos projets dans les règles de l'art, avec la garantie décennale.</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal">
+      <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M6 42h36M10 42V22L24 10l14 12v20M19 42V30h10v12"/></svg></div>
+      <h3>Construction de villas</h3>
+      <p>Maisons individuelles et villas sur mesure, de la fondation à la toiture. Construction neuve et extensions.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M8 42V8h20v34M28 18h12v24M4 42h40M14 14h4M14 22h4M14 30h4M33 26h3M33 34h3"/></svg></div>
+      <h3>Logements collectifs</h3>
+      <p>Gros œuvre de bâtiments d'habitation et de résidences, en lien avec promoteurs, architectes et bureaux d'études.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M4 40h40M4 32h18v8M22 32h20v8M10 24h20v8M30 24h12v8M4 24h6M16 16h20v8M4 16h12"/></svg></div>
+      <h3>Maçonnerie & gros œuvre</h3>
+      <p>Fondations, dalles, murs porteurs, élévations, chaînages, murs de clôture et de soutènement.</p>
+    </article>
+    <article class="card reveal">
+      <div class="card-icon"><svg viewBox="0 0 48 48"><path d="M6 6h16v16H6zM26 6h16v16H26zM6 26h16v16H6zM26 26h16v16H26z"/></svg></div>
+      <h3>Pose de carrelage</h3>
+      <p>Pose intérieure et extérieure : sols, murs, salles de bain, terrasses et plages de piscine.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CATALOGUES PARTENAIRE ============ -->
+<section class="section section-dark" id="catalogues">
+  <div class="section-head reveal">
+    <p class="eyebrow">Fourniture & finitions</p>
+    <h2>Découvrez nos catalogues</h2>
+    <p class="section-lead">Grâce à notre société partenaire, choisissez vos matériaux et équipements parmi une large gamme, posés par nos équipes.</p>
+  </div>
+  <!-- À COMPLÉTER : remplacer "#" par les liens vers les pages catalogue du site partenaire -->
+  <div class="catalog-grid">
+    <a class="catalog reveal" href="#" target="_blank" rel="noopener" data-cat="carrelage">
+      <div class="catalog-art art-carrelage"></div>
+      <div class="catalog-body"><h3>Carrelage</h3><p>Sols, murs, extérieur, grands formats</p><span class="catalog-link">Voir le catalogue <i>→</i></span></div>
+    </a>
+    <a class="catalog reveal" href="#" target="_blank" rel="noopener" data-cat="menuiseries">
+      <div class="catalog-art art-menuiseries"></div>
+      <div class="catalog-body"><h3>Menuiseries extérieures</h3><p>Fenêtres, baies vitrées, volets</p><span class="catalog-link">Voir le catalogue <i>→</i></span></div>
+    </a>
+    <a class="catalog reveal" href="#" target="_blank" rel="noopener" data-cat="sanitaire">
+      <div class="catalog-art art-sanitaire"></div>
+      <div class="catalog-body"><h3>Sanitaire</h3><p>Douches, vasques, WC, robinetterie</p><span class="catalog-link">Voir le catalogue <i>→</i></span></div>
+    </a>
+    <a class="catalog reveal" href="#" target="_blank" rel="noopener" data-cat="cuisines">
+      <div class="catalog-art art-cuisines"></div>
+      <div class="catalog-body"><h3>Cuisines</h3><p>Cuisines équipées sur mesure</p><span class="catalog-link">Voir le catalogue <i>→</i></span></div>
+    </a>
+    <a class="catalog reveal" href="#" target="_blank" rel="noopener" data-cat="portes">
+      <div class="catalog-art art-portes"></div>
+      <div class="catalog-body"><h3>Portes</h3><p>Portes d'entrée, intérieures, garage</p><span class="catalog-link">Voir le catalogue <i>→</i></span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ RÉALISATIONS ============ -->
+<section class="section" id="realisations">
+  <div class="section-head reveal">
+    <p class="eyebrow">Nos références</p>
+    <h2>Nos réalisations dans l'Hérault et le Gard</h2>
+  </div>
+  <div class="filters reveal" role="tablist">
+    <button class="filter active" data-filter="all">Tout</button>
+    <button class="filter" data-filter="villa">Villas</button>
+    <button class="filter" data-filter="logement">Logements</button>
+    <button class="filter" data-filter="carrelage">Carrelage</button>
+  </div>
+  <!-- À COMPLÉTER : remplacer chaque <div class="ph"> par <img src="photos/xxx.jpg" alt="..."> -->
+  <div class="gallery">
+    <figure class="ref reveal" data-type="villa"><div class="ph ph1"><span>Photo à venir</span></div><figcaption><strong>Villa contemporaine</strong><span>Castelnau-le-Lez (34)</span></figcaption></figure>
+    <figure class="ref reveal" data-type="logement"><div class="ph ph2"><span>Photo à venir</span></div><figcaption><strong>Résidence 24 logements</strong><span>Montpellier (34)</span></figcaption></figure>
+    <figure class="ref reveal" data-type="villa"><div class="ph ph3"><span>Photo à venir</span></div><figcaption><strong>Villa avec piscine</strong><span>Nîmes (30)</span></figcaption></figure>
+    <figure class="ref reveal" data-type="carrelage"><div class="ph ph4"><span>Photo à venir</span></div><figcaption><strong>Terrasse grand format</strong><span>Lattes (34)</span></figcaption></figure>
+    <figure class="ref reveal" data-type="villa"><div class="ph ph5"><span>Photo à venir</span></div><figcaption><strong>Maison plain-pied</strong><span>Lunel (34)</span></figcaption></figure>
+    <figure class="ref reveal" data-type="logement"><div class="ph ph6"><span>Photo à venir</span></div><figcaption><strong>Petit collectif R+2</strong><span>Alès (30)</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ MÉTHODE ============ -->
+<section class="section section-alt" id="methode">
+  <div class="section-head reveal">
+    <p class="eyebrow">Notre méthode</p>
+    <h2>Votre projet en 4 étapes</h2>
+  </div>
+  <ol class="steps" id="steps">
+    <li class="step reveal"><span class="step-n">01</span><h3>Rencontre & étude</h3><p>Visite du terrain, écoute de vos besoins, étude des plans.</p></li>
+    <li class="step reveal"><span class="step-n">02</span><h3>Devis détaillé</h3><p>Un chiffrage clair et gratuit, poste par poste.</p></li>
+    <li class="step reveal"><span class="step-n">03</span><h3>Chantier</h3><p>Nos équipes réalisent les travaux, avec un suivi régulier.</p></li>
+    <li class="step reveal"><span class="step-n">04</span><h3>Livraison</h3><p>Réception des travaux et remise des clés.</p></li>
+  </ol>
+</section>
+
+<!-- ============ ZONE ============ -->
+<section class="section" id="zone">
+  <div class="zone-wrap">
+    <div class="reveal">
+      <p class="eyebrow">Zone d'intervention</p>
+      <h2>Maçonnerie et construction dans l'Hérault et le Gard</h2>
+      <p class="section-lead">Basés à Montpellier, nous intervenons dans tout l'Hérault (34) et le Gard (30).</p>
+    </div>
+    <div class="zone-cols">
+      <div class="reveal">
+        <h3>Hérault (34)</h3>
+        <ul class="chips">
+          <li>Montpellier</li><li>Béziers</li><li>Sète</li><li>Agde</li><li>Lunel</li><li>Lattes</li><li>Castelnau-le-Lez</li><li>Pérols</li><li>Mauguio</li><li>Frontignan</li><li>Saint-Jean-de-Védas</li><li>Juvignac</li><li>Clapiers</li><li>Jacou</li><li>Le Crès</li><li>Grabels</li><li>Lodève</li><li>Pézenas</li><li>Clermont-l'Hérault</li><li>Ganges</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3>Gard (30)</h3>
+        <ul class="chips">
+          <li>Nîmes</li><li>Alès</li><li>Bagnols-sur-Cèze</li><li>Beaucaire</li><li>Vauvert</li><li>Saint-Gilles</li><li>Uzès</li><li>Sommières</li><li>Aigues-Mortes</li><li>Le Grau-du-Roi</li><li>Villeneuve-lès-Avignon</li><li>Pont-Saint-Esprit</li><li>Marguerittes</li><li>Caissargues</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-dark" id="contact">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de votre projet</h2>
+      <p class="section-lead">Devis gratuit et sans engagement. Réponse rapide.</p>
+      <!-- À COMPLÉTER : vraies coordonnées -->
+      <ul class="contact-list">
+        <li><span>Téléphone</span><a href="tel:+33400000000">04 00 00 00 00</a></li>
+        <li><span>Email</span><a href="mailto:contact@htp-construction.fr">contact@htp-construction.fr</a></li>
+        <li><span>Adresse</span>Montpellier (34)</li>
+        <li><span>Horaires</span>Lundi – Vendredi, 8h – 18h</li>
+      </ul>
+    </div>
+    <form class="form reveal" id="contactForm">
+      <div class="row">
+        <label>Nom<input name="nom" required autocomplete="name"></label>
+        <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
+      </div>
+      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <div class="row">
+        <label>Type de projet
+          <select name="projet">
+            <option>Construction de villa</option>
+            <option>Logements collectifs</option>
+            <option>Maçonnerie / gros œuvre</option>
+            <option>Extension</option>
+            <option>Carrelage</option>
+            <option>Autre</option>
+          </select>
+        </label>
+        <label>Ville du projet<input name="ville" placeholder="ex : Nîmes"></label>
+      </div>
+      <label>Votre message<textarea name="message" rows="4"></textarea></label>
+      <button class="btn" type="submit">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><span class="logo-mark">HTP</span><p>Maçonnerie, construction de villas et de logements à Montpellier. Intervention dans l'Hérault et le Gard.</p></div>
+    <!-- À COMPLÉTER : SIRET, assurance décennale, mentions légales -->
+    <p class="footer-legal">© <span id="year"></span> HTP · SIRET : à compléter · Assurance décennale : à compléter · <a href="#">Mentions légales</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
